@@ -16,6 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+Route::get('trails/follow/{id}', 'TrailController@follow');
 Route::resource('trails', 'TrailController');
 Route::resource('points', 'PointController');
